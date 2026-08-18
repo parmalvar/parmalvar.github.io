@@ -1,3 +1,2 @@
-Cormorant Garamond, Source Serif 4, and Source Sans 3
-are licensed under the SIL Open Font License, Version 1.1.
+Source Serif 4 and Source Sans 3 are licensed under the SIL Open Font License, Version 1.1.
 https://scripts.sil.org/OFL
