@@ -1,6 +1,6 @@
 # parmalvar.github.io
 
-Academic homepage for Parniyan Malekzadeh Varnousfaderani: [https://parmalvar.github.io](https://parmalvar.github.io).
+Academic homepage for Parniyan Malekzadeh: [https://parmalvar.github.io](https://parmalvar.github.io).
 
 Static HTML (no Jekyll). Optional headshot lives at `assets/portrait.jpg`.
 

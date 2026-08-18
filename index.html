@@ -8,7 +8,9 @@
   <link rel="canonical" href="https://parmalvar.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/portrait.jpg">
-  <meta name="theme-color" content="#1a2744">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-400.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#141c2e">
   <meta property="og:title" content="Parniyan Malekzadeh">
   <meta property="og:description" content="Network security and applied cryptography. Seeded evaluations, not new SOTA methods.">
   <meta property="og:url" content="https://parmalvar.github.io/">
@@ -37,153 +39,161 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="top-bar" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top">Parniyan Malekzadeh</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="files/Parniyan_Malekzadeh_CV.pdf">CV</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="shell">
+    <aside class="identity">
+      <header class="mobile-bar">
+        <a class="brand" href="#top">Parniyan Malekzadeh</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </header>
 
-  <main id="main">
-    <section class="masthead wrap" id="top">
-      <p class="kicker">Isfahan University of Technology</p>
-      <h1>Parniyan Malekzadeh</h1>
-      <p class="subtitle">Computer Engineering · Secure Computing</p>
-      <span class="ornament" aria-hidden="true"></span>
-    </section>
-
-    <section class="intro wrap" id="about">
-      <figure class="portrait">
+      <figure class="portrait" id="top">
         <img src="assets/portrait.jpg" width="640" height="640" alt="Portrait of Parniyan Malekzadeh">
       </figure>
-      <div class="intro-copy">
-        <h2>About</h2>
-        <p>
-          I am a Computer Engineering graduate in Secure Computing at Isfahan University of Technology
-          (GPA 18.05/20.0; major GPA 4.0/4.0). I was Head TA for Secure Computing and Secure Software
-          Development, and a TA for Fundamentals of Cryptography.
-        </p>
-        <p>
-          My research thread is three questions with seeded evaluations, not new SOTA methods:
-          where a budgeted defender should look in a network; how a textbook crypto implementation
-          leaks; and whether a flow classifier can be evaded. The artifacts are public student
-          manuscripts (code, tables, English workshop-style reports).
-        </p>
-        <p class="links">
-          <a href="mailto:parnian.malekzadeh1@gmail.com">Email</a>
-          <a href="https://github.com/parmalvar">GitHub</a>
-          <a href="https://www.linkedin.com/in/parniyanmalekzadeh">LinkedIn</a>
-          <a href="files/Parniyan_Malekzadeh_CV.pdf">CV (PDF)</a>
-        </p>
+
+      <div class="identity-body">
+        <p class="kicker">Isfahan University of Technology</p>
+        <h1>Parniyan Malekzadeh</h1>
+        <p class="subtitle">Computer Engineering<br>Secure Computing</p>
+
+        <nav id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="files/Parniyan_Malekzadeh_CV.pdf">CV</a></li>
+          </ul>
+        </nav>
+
+        <ul class="contact">
+          <li><a href="mailto:parnian.malekzadeh1@gmail.com">Email</a></li>
+          <li><a href="https://github.com/parmalvar">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/parniyanmalekzadeh">LinkedIn</a></li>
+          <li><a href="files/Parniyan_Malekzadeh_CV.pdf">CV (PDF)</a></li>
+        </ul>
       </div>
-    </section>
+    </aside>
 
-    <section class="wrap" id="research">
-      <h2>Research</h2>
-      <p class="note">
-        Re-implementations of canonical problems with experiment tables. Not claimed as new attacks,
-        new detectors, or accepted workshop papers.
-      </p>
-
-      <article class="entry">
-        <p class="num" aria-hidden="true">I</p>
-        <div>
-          <h3>Game-theoretic IDS sampling</h3>
-          <p class="meta">2026 · student manuscript · GameSec-style evaluation</p>
+    <div class="manuscript">
+      <main id="main">
+        <section id="about">
+          <p class="section-index">01</p>
+          <h2>About</h2>
+          <p class="lead">
+            Graduate in Computer Engineering, Secure Computing, at Isfahan University of Technology
+            (GPA 18.05/20.0; major GPA 4.0/4.0). Head teaching assistant for Secure Computing and
+            Secure Software Development; teaching assistant for Fundamentals of Cryptography.
+          </p>
           <p>
-            Seeded re-implementation of the sampling-budget IDS game (Kodialam &amp; Lakshman, INFOCOM 2003).
-            Under a tight budget (<em>B<sub>s</sub>/MF ≈ 0.30</em>) on a 3×3 grid with decoy links,
-            <strong>min-cut allocation reached detection 0.300 versus 0.161 for uniform</strong>
-            (87% relative gain). The course derivation is cited separately.
+            The research thread is three questions with seeded evaluations, not new SOTA methods:
+            where a budgeted defender should look in a network; how a textbook crypto implementation
+            leaks; and whether a flow classifier can be evaded. The artifacts are public student
+            manuscripts — code, tables, and English workshop-style reports.
           </p>
-          <p class="links">
-            <a href="https://github.com/parmalvar/IDS-Sampling-Game">Repository</a>
-            <a href="https://github.com/parmalvar/IDS-Sampling-Game/blob/main/report/report.pdf">Report (PDF)</a>
-          </p>
-        </div>
-      </article>
+        </section>
 
-      <article class="entry">
-        <p class="num" aria-hidden="true">II</p>
-        <div>
-          <h3>Simulated SPA of textbook RSA-CRT</h3>
-          <p class="meta">2026 · student manuscript · CHES/COSADE-style evaluation</p>
-          <p>
-            Simulated simple power analysis of square-and-multiply RSA-CRT (not ChipWhisperer, not OpenSSL).
-            A single noiseless opcode trace recovered <em>d<sub>p</sub></em> and factored 1024-bit <em>n</em> on
-            <strong>100% of seeded trials</strong>. A Montgomery ladder and dummy multiply made that
-            distinguisher fail (0% exact <em>d<sub>p</sub></em>). Message blinding still leaked <em>d<sub>p</sub></em>; exponent
-            blinding hid <em>d<sub>p</sub></em> but the recovered <em>d<sub>p</sub>′</em> still factored <em>n</em>.
+        <section id="research">
+          <p class="section-index">02</p>
+          <h2>Research</h2>
+          <p class="note">
+            Re-implementations of canonical problems with experiment tables. Not claimed as new
+            attacks, new detectors, or accepted workshop papers.
           </p>
-          <p class="links">
-            <a href="https://github.com/parmalvar/RSA-CRT-SPA">Repository</a>
-            <a href="https://github.com/parmalvar/RSA-CRT-SPA/blob/main/report/report.pdf">Report (PDF)</a>
-          </p>
-        </div>
-      </article>
 
-      <article class="entry">
-        <p class="num" aria-hidden="true">III</p>
-        <div>
-          <h3>Constrained adversarial examples against a flow NIDS</h3>
-          <p class="meta">2026 · student manuscript · AISec/RAID-style evaluation</p>
-          <p>
-            Feature-space FGSM/PGD on a CIC-IDS2017 Wednesday DoS subsample. Not a new detector and
-            not a packet replay. Unconstrained PGD reached <strong>82% ASR</strong> at scaled
-            <em>L<sub>∞</sub> ε = 0.5</em>; a padding/delay mutability mask lowered ASR to
-            <strong>46%</strong>. Constrained examples still transferred to a random forest at 61%.
-            PGD adversarial training cut constrained ASR to <strong>8%</strong>.
-          </p>
-          <p class="links">
-            <a href="https://github.com/parmalvar/Adversarial-Flow-NIDS">Repository</a>
-            <a href="https://github.com/parmalvar/Adversarial-Flow-NIDS/blob/main/report/report.pdf">Report (PDF)</a>
-          </p>
-        </div>
-      </article>
-    </section>
+          <article class="entry">
+            <p class="folio" aria-hidden="true">I</p>
+            <div>
+              <h3>Game-theoretic IDS sampling</h3>
+              <p class="meta">2026 · student manuscript · GameSec-style evaluation</p>
+              <p>
+                Seeded re-implementation of the sampling-budget IDS game (Kodialam &amp; Lakshman, INFOCOM 2003).
+                Under a tight budget (<em>B<sub>s</sub>/MF ≈ 0.30</em>) on a 3×3 grid with decoy links,
+                <strong>min-cut allocation reached detection 0.300 versus 0.161 for uniform</strong>
+                (87% relative gain). The course derivation is cited separately.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/IDS-Sampling-Game">Repository</a>
+                <a href="https://github.com/parmalvar/IDS-Sampling-Game/blob/main/report/report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
 
-    <section class="wrap" id="teaching">
-      <h2>Teaching</h2>
-      <p>
-        <strong>Isfahan University of Technology, 2021–2025.</strong>
-        Head TA, Secure Computing (protocols, secure design, threat modeling) and Secure Software
-        Development (curriculum projects). TA, Fundamentals of Cryptography (RSA, SPA, CRT).
-        Also TA: Automata Theory, Artificial Intelligence, IT Fundamentals (Zero Trust, Packet Tracer),
-        Database Design, Linear Algebra.
-      </p>
-    </section>
+          <article class="entry">
+            <p class="folio" aria-hidden="true">II</p>
+            <div>
+              <h3>Simulated SPA of textbook RSA-CRT</h3>
+              <p class="meta">2026 · student manuscript · CHES/COSADE-style evaluation</p>
+              <p>
+                Simulated simple power analysis of square-and-multiply RSA-CRT (not ChipWhisperer, not OpenSSL).
+                A single noiseless opcode trace recovered <em>d<sub>p</sub></em> and factored 1024-bit <em>n</em> on
+                <strong>100% of seeded trials</strong>. A Montgomery ladder and dummy multiply made that
+                distinguisher fail (0% exact <em>d<sub>p</sub></em>). Message blinding still leaked <em>d<sub>p</sub></em>;
+                exponent blinding hid <em>d<sub>p</sub></em> but the recovered <em>d<sub>p</sub>′</em> still factored <em>n</em>.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/RSA-CRT-SPA">Repository</a>
+                <a href="https://github.com/parmalvar/RSA-CRT-SPA/blob/main/report/report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
 
-    <section class="wrap" id="coursework">
-      <h2>Selected coursework</h2>
-      <p>
-        Supporting labs, not the research lead:
-        <a href="https://github.com/parmalvar/Game-Theoretic-Network-IDS">GT IDS derivation</a>,
-        <a href="https://github.com/parmalvar/NetSec-CTF-Writeup">network-security CTF writeup</a>,
-        <a href="https://github.com/parmalvar/Mininet-OVS-Projects">Mininet / OVS labs</a>.
-      </p>
-    </section>
-  </main>
+          <article class="entry">
+            <p class="folio" aria-hidden="true">III</p>
+            <div>
+              <h3>Constrained adversarial examples against a flow NIDS</h3>
+              <p class="meta">2026 · student manuscript · AISec/RAID-style evaluation</p>
+              <p>
+                Feature-space FGSM/PGD on a CIC-IDS2017 Wednesday DoS subsample. Not a new detector and
+                not a packet replay. Unconstrained PGD reached <strong>82% ASR</strong> at scaled
+                <em>L<sub>∞</sub> ε = 0.5</em>; a padding/delay mutability mask lowered ASR to
+                <strong>46%</strong>. Constrained examples still transferred to a random forest at 61%.
+                PGD adversarial training cut constrained ASR to <strong>8%</strong>.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/Adversarial-Flow-NIDS">Repository</a>
+                <a href="https://github.com/parmalvar/Adversarial-Flow-NIDS/blob/main/report/report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
+        </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span class="ornament" aria-hidden="true"></span>
-      <p>
-        <a href="mailto:parnian.malekzadeh1@gmail.com">parnian.malekzadeh1@gmail.com</a>
-        ·
-        <a href="https://github.com/parmalvar/parmalvar.github.io">Source of this site</a>
-      </p>
+        <section id="teaching">
+          <p class="section-index">03</p>
+          <h2>Teaching</h2>
+          <p class="meta teaching-place">Isfahan University of Technology · 2021–2025</p>
+          <ul class="roles">
+            <li>
+              <span class="role-name">Head teaching assistant</span>
+              <span class="role-detail">Secure Computing (protocols, secure design, threat modeling); Secure Software Development</span>
+            </li>
+            <li>
+              <span class="role-name">Teaching assistant</span>
+              <span class="role-detail">Fundamentals of Cryptography (RSA, SPA, CRT); Automata Theory; Artificial Intelligence; IT Fundamentals (Zero Trust, Packet Tracer); Database Design; Linear Algebra</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="coursework">
+          <p class="section-index">04</p>
+          <h2>Selected coursework</h2>
+          <p class="note">Supporting labs, not the research lead.</p>
+          <ul class="course-links">
+            <li><a href="https://github.com/parmalvar/Game-Theoretic-Network-IDS">GT IDS derivation</a></li>
+            <li><a href="https://github.com/parmalvar/NetSec-CTF-Writeup">Network-security CTF writeup</a></li>
+            <li><a href="https://github.com/parmalvar/Mininet-OVS-Projects">Mininet / OVS labs</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          <a href="mailto:parnian.malekzadeh1@gmail.com">parnian.malekzadeh1@gmail.com</a>
+          <span aria-hidden="true"> · </span>
+          <a href="https://github.com/parmalvar/parmalvar.github.io">Source</a>
+        </p>
+      </footer>
     </div>
-  </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
