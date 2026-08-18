@@ -165,19 +165,16 @@ a:focus-visible,
   height: 5.5rem;
   border-radius: 50%;
   background: var(--navy);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-family: Georgia, serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.04em;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  object-position: center 12%;
+  display: block;
 }
 
 .lede {
