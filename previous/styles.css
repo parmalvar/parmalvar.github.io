@@ -1,0 +1,593 @@
+/* Faculty folio: navy identity rail, ivory manuscript. */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/fonts/cormorant-garamond-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/fonts/cormorant-garamond-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/fonts/cormorant-garamond-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("assets/fonts/source-serif-4-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("assets/fonts/source-serif-4-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("assets/fonts/source-serif-4-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("assets/fonts/source-sans-3-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("assets/fonts/source-sans-3-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --navy: #141c2e;
+  --navy-mid: #1c2740;
+  --brass: #c4a06a;
+  --brass-dim: #a6854e;
+  --ivory: #f6f1e8;
+  --paper: #fbf8f2;
+  --ink: #1f1c18;
+  --muted: #5c564d;
+  --rule: #e4dbce;
+  --display: "Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, serif;
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--navy);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+.folio,
+.brand {
+  font-family: var(--display);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.55rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--navy);
+  margin: 0 0 1.1rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--navy);
+  margin: 0 0 0.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--navy);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--brass-dim);
+}
+
+a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 0.6rem;
+  top: -3rem;
+  background: var(--brass);
+  color: var(--navy);
+  padding: 0.4rem 0.7rem;
+  z-index: 30;
+  font-family: var(--sans);
+}
+
+.skip:focus {
+  top: 0.6rem;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(20rem, 24.5rem) minmax(0, 1fr);
+  min-height: 100vh;
+  max-width: 92rem;
+  margin: 0 auto;
+  background: var(--paper);
+}
+
+.identity {
+  background: var(--navy);
+  color: var(--ivory);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mobile-bar {
+  display: none;
+}
+
+.portrait {
+  margin: 0;
+  height: min(28rem, 46vh);
+  min-height: 15rem;
+  overflow: hidden;
+  background: var(--navy-mid);
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+  filter: saturate(0.88) contrast(1.06);
+}
+
+.identity-body {
+  padding: 1.6rem 1.75rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-top: 1px solid rgba(196, 160, 106, 0.28);
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.identity h1 {
+  font-size: clamp(2.15rem, 4vw, 2.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0.45rem 0 0.55rem;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(246, 241, 232, 0.72);
+}
+
+#site-nav ul,
+.contact,
+.roles,
+.course-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#site-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+#site-nav a {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(246, 241, 232, 0.62);
+}
+
+#site-nav a:hover,
+#site-nav a[aria-current="location"] {
+  color: var(--brass);
+}
+
+.contact {
+  margin-top: auto;
+  padding-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+.contact a {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--brass);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196, 160, 106, 0.35);
+}
+
+.contact a:hover {
+  border-bottom-color: var(--brass);
+  color: #e8d5b0;
+}
+
+.manuscript {
+  background:
+    linear-gradient(180deg, rgba(20, 28, 46, 0.035), transparent 12rem),
+    var(--paper);
+  padding: 3.25rem clamp(1.6rem, 4vw, 4.5rem) 2.5rem;
+  min-width: 0;
+}
+
+.manuscript main {
+  max-width: 46rem;
+}
+
+section {
+  margin: 0 0 3.1rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.section-index {
+  margin: 0 0 0.15rem;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brass-dim);
+}
+
+.lead {
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.note {
+  color: var(--muted);
+  font-style: italic;
+  margin: -0.35rem 0 1.35rem;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 3.1rem minmax(0, 1fr);
+  gap: 0.2rem 1rem;
+  margin: 0 0 1rem;
+  padding: 1.15rem 1.2rem 1.2rem 0.9rem;
+  background: var(--ivory);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--navy);
+}
+
+.folio {
+  margin: 0.15rem 0 0;
+  font-size: 1.85rem;
+  font-style: italic;
+  line-height: 1;
+  color: var(--brass-dim);
+}
+
+.meta {
+  margin: 0 0 0.65rem;
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.entry p {
+  margin: 0 0 0.7rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin: 0.15rem 0 0;
+}
+
+.links a,
+.course-links a {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--navy);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 0.05rem;
+}
+
+.links a:hover,
+.course-links a:hover {
+  color: var(--brass-dim);
+}
+
+.teaching-place {
+  margin: -0.4rem 0 1rem;
+}
+
+.roles li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.roles li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.role-name {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.role-detail {
+  color: var(--muted);
+}
+
+.course-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.site-footer {
+  max-width: 46rem;
+  padding-top: 0.4rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--navy);
+}
+
+.nav-toggle {
+  background: transparent;
+  border: 1px solid rgba(196, 160, 106, 0.55);
+  color: var(--ivory);
+  padding: 0.28rem 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.brand:hover {
+  color: var(--brass);
+}
+
+@media (max-width: 860px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .identity {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .identity-body {
+    display: contents;
+  }
+
+  .mobile-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    order: 0;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 0.7rem 1.15rem;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(196, 160, 106, 0.25);
+  }
+
+  #site-nav {
+    order: 1;
+    display: none;
+    margin: 0;
+    padding: 0.85rem 1.2rem 1rem;
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(196, 160, 106, 0.22);
+  }
+
+  #site-nav.is-open {
+    display: block;
+  }
+
+  .portrait {
+    order: 2;
+  }
+
+  .kicker,
+  .identity h1,
+  .subtitle,
+  .contact {
+    order: 3;
+  }
+
+  .kicker,
+  .subtitle,
+  .contact {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .kicker {
+    padding-top: 1.35rem;
+  }
+
+  .contact {
+    padding-bottom: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  .identity h1 {
+    display: none;
+  }
+
+  .portrait {
+    height: min(22rem, 58vw);
+  }
+
+  .manuscript {
+    padding: 2rem 1.25rem 2.2rem;
+  }
+
+  .entry {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    padding: 1rem 0.9rem 1.05rem 0.7rem;
+  }
+}
+
+@media print {
+  .mobile-bar,
+  .nav-toggle,
+  .skip,
+  #site-nav {
+    display: none !important;
+  }
+
+  body,
+  .shell,
+  .identity,
+  .manuscript {
+    background: #fff;
+    color: #000;
+  }
+
+  .identity {
+    position: static;
+    height: auto;
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    color: #000;
+  }
+
+  .identity h1,
+  .kicker,
+  .subtitle,
+  .contact a {
+    color: #000;
+  }
+
+  .identity h1 {
+    display: block;
+  }
+
+  .portrait {
+    height: 8rem;
+  }
+}
