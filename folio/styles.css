@@ -196,8 +196,8 @@ a:focus-visible,
 
 .portrait {
   margin: 0;
-  height: min(22rem, 40vh);
-  min-height: 13rem;
+  height: min(28rem, 46vh);
+  min-height: 15rem;
   overflow: hidden;
   background: var(--navy-mid);
 }
@@ -237,30 +237,19 @@ a:focus-visible,
   margin: 0.45rem 0 0.55rem;
 }
 
-.institution {
-  margin: 0 0 0.7rem;
+.subtitle {
+  margin: 0 0 1.5rem;
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.45;
   color: rgba(246, 241, 232, 0.72);
 }
 
-.focus {
-  margin: 0 0 1.35rem;
-  font-family: var(--sans);
-  font-size: 0.84rem;
-  font-weight: 400;
-  line-height: 1.45;
-  color: var(--brass-soft, var(--brass));
-}
-
 #site-nav ul,
 .contact,
-.tags,
-.honors,
-.stats,
-.course-group ul {
+.roles,
+.course-links {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -341,64 +330,10 @@ section {
   line-height: 1.65;
 }
 
-.subhead {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--brass-dim);
-  margin: 1.2rem 0 0.65rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.tags li {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-  color: var(--navy);
-  border: 1px solid var(--rule);
-  background: var(--ivory);
-  padding: 0.28rem 0.55rem;
-}
-
 .note {
   color: var(--muted);
   font-style: italic;
   margin: -0.35rem 0 1.35rem;
-}
-
-.research-card {
-  padding: 1.25rem 1.3rem 1.3rem;
-  background: var(--ivory);
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--brass-dim);
-}
-
-.research-label {
-  margin: 0 0 0.35rem;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--brass-dim);
-}
-
-.supervision {
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.92rem;
-  margin: -0.25rem 0 0.85rem;
-}
-
-.research-card p:last-child {
-  margin-bottom: 0;
 }
 
 .entry {
@@ -410,11 +345,6 @@ section {
   background: var(--ivory);
   border: 1px solid var(--rule);
   border-left: 3px solid var(--navy);
-}
-
-.entry.compact {
-  grid-template-columns: minmax(0, 1fr);
-  padding: 0.95rem 1.1rem 1rem;
 }
 
 .folio {
@@ -444,7 +374,8 @@ section {
   margin: 0.15rem 0 0;
 }
 
-.links a {
+.links a,
+.course-links a {
   font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 600;
@@ -456,115 +387,41 @@ section {
   padding-bottom: 0.05rem;
 }
 
-.links a:hover {
+.links a:hover,
+.course-links a:hover {
   color: var(--brass-dim);
 }
 
-.role {
-  padding: 0.2rem 0 1.15rem;
-  border-top: 1px solid var(--rule);
+.teaching-place {
+  margin: -0.4rem 0 1rem;
 }
 
-.role:first-of-type {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.stats {
+.roles li {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem 1.2rem;
-  margin: 0.4rem 0 0;
+  gap: 0.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--rule);
 }
 
-.stat-value {
-  display: block;
+.roles li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.role-name {
   font-family: var(--display);
-  font-size: 1.55rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--navy);
-  line-height: 1.1;
 }
 
-.stat-label {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.82rem;
+.role-detail {
   color: var(--muted);
-  margin-top: 0.2rem;
 }
 
-.honors {
-  margin-top: 0.4rem;
-}
-
-.honors > li {
-  padding: 0.9rem 0 0.2rem;
-  border-top: 1px solid var(--rule);
-}
-
-.honors h3 {
-  font-size: 1.22rem;
-}
-
-.coursework-details {
-  margin-top: 1.4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-.coursework-details summary {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--navy);
-  cursor: pointer;
-}
-
-.coursework-details summary:focus-visible {
-  outline: 2px solid var(--navy);
-  outline-offset: 3px;
-}
-
-.course-group {
-  margin: 1rem 0 0;
-}
-
-.course-group h3 {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--brass-dim);
-  margin: 0 0 0.35rem;
-}
-
-.course-group li {
-  color: var(--muted);
-  font-size: 0.95rem;
-  padding: 0.12rem 0;
-}
-
-.skill-list {
-  margin: 0;
-}
-
-.skill-list dt {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin: 0 0 0.25rem;
-}
-
-.skill-list dd {
-  margin: 0 0 1rem;
-  color: var(--muted);
+.course-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .site-footer {
@@ -573,14 +430,6 @@ section {
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.88rem;
-}
-
-.site-footer p {
-  margin: 0 0 0.45rem;
-}
-
-.site-footer .updated {
-  margin: 0;
 }
 
 .site-footer a {
@@ -664,15 +513,13 @@ section {
 
   .kicker,
   .identity h1,
-  .institution,
-  .focus,
+  .subtitle,
   .contact {
     order: 3;
   }
 
   .kicker,
-  .institution,
-  .focus,
+  .subtitle,
   .contact {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -699,21 +546,9 @@ section {
     padding: 2rem 1.25rem 2.2rem;
   }
 
-  section {
-    scroll-margin-top: 4rem;
-  }
-
   .entry {
     grid-template-columns: 2.2rem minmax(0, 1fr);
     padding: 1rem 0.9rem 1.05rem 0.7rem;
-  }
-
-  .entry.compact {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -743,8 +578,7 @@ section {
 
   .identity h1,
   .kicker,
-  .institution,
-  .focus,
+  .subtitle,
   .contact a {
     color: #000;
   }
