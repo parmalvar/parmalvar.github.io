@@ -351,6 +351,42 @@ section {
   margin: 1.2rem 0 0.65rem;
 }
 
+.additional-label {
+  margin-top: 2.1rem;
+}
+
+.related {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 0.7rem;
+}
+
+.related a {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--brass);
+}
+
+.related a:hover {
+  color: var(--brass-dim);
+}
+
+.entry.compact {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0.7rem 0.95rem 0.75rem;
+  margin-bottom: 0.7rem;
+}
+
+.entry.compact h3 {
+  font-size: 1.18rem;
+}
+
+.entry.compact p {
+  margin-bottom: 0.45rem;
+  font-size: 0.98rem;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -410,11 +446,6 @@ section {
   background: var(--ivory);
   border: 1px solid var(--rule);
   border-left: 3px solid var(--navy);
-}
-
-.entry.compact {
-  grid-template-columns: minmax(0, 1fr);
-  padding: 0.95rem 1.1rem 1rem;
 }
 
 .folio {

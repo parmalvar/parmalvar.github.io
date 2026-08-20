@@ -37,11 +37,11 @@
       "name": "Isfahan University of Technology"
     },
     "knowsAbout": [
+      "Applied Cryptography",
       "Malware Detection",
-      "Concept Drift",
-      "Digital Forensics and Incident Response",
       "Network Security",
-      "Applied Cryptography"
+      "Digital Forensics and Incident Response",
+      "Concept Drift"
     ],
     "sameAs": [
       "https://github.com/parmalvar",
@@ -68,7 +68,7 @@
         <p class="kicker">Computer Engineering · Secure Computing</p>
         <h1>Parniyan Malekzadeh</h1>
         <p class="institution">Isfahan University of Technology · BSc 2026</p>
-        <p class="focus">Malware Detection &amp; Concept Drift · Network Security · Applied Cryptography</p>
+        <p class="focus">Applied Cryptography · Malware Detection · Network Security</p>
 
         <nav id="site-nav" aria-label="Primary">
           <ul>
@@ -103,10 +103,10 @@
           </p>
           <h3 class="subhead">Research Interests</h3>
           <ul class="tags">
-            <li>Malware Detection &amp; Concept Drift</li>
-            <li>Digital Forensics &amp; Incident Response</li>
-            <li>Network Security</li>
             <li>Applied Cryptography</li>
+            <li>Malware Detection</li>
+            <li>Network Security</li>
+            <li>Digital Forensics &amp; Incident Response</li>
           </ul>
         </section>
 
@@ -129,10 +129,12 @@
 
         <section id="projects">
           <p class="section-index">03</p>
-          <h2>Selected Projects</h2>
+          <h2>Projects</h2>
           <p class="note">
             Selected security and machine-learning projects with public code, reports, and reproducible experiments.
           </p>
+
+          <p class="subhead">Featured Projects</p>
 
           <article class="entry">
             <p class="folio" aria-hidden="true">I</p>
@@ -172,6 +174,10 @@
               <p>
                 Extended a theoretical IDS-sampling model into a reproducible simulation framework for allocating limited sampling budgets using max-flow/min-cut, with uniform and randomized baselines. In seeded Monte Carlo experiments, on a 3×3 grid at <em>B<sub>s</sub></em>/MF ≈ 0.30, min-cut allocation achieved detection probability <strong>0.300 vs 0.161</strong> for uniform sampling, an <strong>87% relative improvement</strong>.
               </p>
+              <p class="related">
+                Earlier theoretical work:
+                <a href="https://github.com/parmalvar/Game-Theoretic-Network-IDS">Game-Theoretic Network IDS</a>
+              </p>
               <p class="links">
                 <a href="https://github.com/parmalvar/IDS-Sampling-Game">Repository</a>
                 <a href="https://github.com/parmalvar/IDS-Sampling-Game/blob/main/report/report.pdf">Report</a>
@@ -179,7 +185,8 @@
             </div>
           </article>
 
-          <article class="entry compact">
+          <article class="entry">
+            <p class="folio" aria-hidden="true">IV</p>
             <div>
               <h3>Network Security CTF</h3>
               <p class="meta">2025 · Network Security · CTF · Applied Cryptography</p>
@@ -193,7 +200,8 @@
             </div>
           </article>
 
-          <article class="entry compact">
+          <article class="entry">
+            <p class="folio" aria-hidden="true">V</p>
             <div>
               <h3>CERT and Incident Response Research</h3>
               <p class="meta">2024 · DFIR · CERT/CSIRT · Incident Response</p>
@@ -203,6 +211,50 @@
               <p class="links">
                 <a href="https://github.com/parmalvar/CERT-Incident-Response-Research">Repository</a>
                 <a href="https://github.com/parmalvar/CERT-Incident-Response-Research/blob/main/Report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
+
+          <p class="subhead additional-label">Additional Projects</p>
+
+          <article class="entry compact">
+            <div>
+              <h3>Deep RL Reproducibility Analysis</h3>
+              <p class="meta">2024 · Machine Learning · Reinforcement Learning</p>
+              <p>
+                Studied reproducibility challenges in deep reinforcement learning through an analysis of TRPO, PPO, DDPG, and ACKTR across continuous-control environments, focusing on random-seed sensitivity, architecture and implementation effects, statistical significance, and reliable experimental reporting. Reading-and-analysis project based on <cite>Deep Reinforcement Learning That Matters</cite>.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/DeepRL-Reproducibility-Analysis">Repository</a>
+                <a href="https://github.com/parmalvar/DeepRL-Reproducibility-Analysis/blob/main/Report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="entry compact">
+            <div>
+              <h3>Mininet and Open vSwitch Labs</h3>
+              <p class="meta">2023 · Computer Networks · SDN</p>
+              <p>
+                Built and analyzed virtual network topologies using Linux namespaces, Mininet, and Open vSwitch, including veth-based connectivity, routing, NAT, DNS resolution, OVS flow tables, OpenFlow, and packet analysis with Wireshark.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/Mininet-OVS-Projects">Repository</a>
+                <a href="https://github.com/parmalvar/Mininet-OVS-Projects/blob/main/Phase2-Report.pdf">Report</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="entry compact">
+            <div>
+              <h3>Mitnick Attack Lab</h3>
+              <p class="meta">2025 · Course security lab · SEED Labs</p>
+              <p>
+                Recreated the classic Mitnick TCP/rsh attack scenario in the SEED security-lab environment on a closed Docker network, studying IP-based trust, TCP sequence handling, spoofed connections, and the security weaknesses of legacy rsh authentication.
+              </p>
+              <p class="links">
+                <a href="https://github.com/parmalvar/Mitnick-Attack-Lab">Repository</a>
+                <a href="https://github.com/parmalvar/Mitnick-Attack-Lab/blob/main/Writeup.pdf">Writeup</a>
               </p>
             </div>
           </article>
