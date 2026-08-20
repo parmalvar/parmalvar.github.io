@@ -46,7 +46,7 @@
         });
       });
     },
-    { rootMargin: "-28% 0px -58% 0px", threshold: 0 }
+    { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
   );
 
   sections.forEach(function (section) {
